@@ -43,7 +43,7 @@ def countdown(seconds):
         time.sleep(1)
         seconds -= 1
     dolphin.clear()
-    dolphin.write("It is over, thanks for playing -Yusuf Ünal Özdemir", align="center", font=("Arial", 24, "normal"))
+    dolphin.write("It is over", align="center", font=("Arial", 24, "normal"))
 
 
 countdown(10)
