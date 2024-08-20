@@ -1,5 +1,4 @@
 import turtle
-import time
 
 one=turtle.Turtle()
 screen=turtle.Screen()
@@ -26,17 +25,15 @@ score_turtle = turtle.Turtle()
 score_turtle.hideturtle()
 score_turtle.penup()
 score_turtle.goto(0, screen.window_height()//2 - 40)
-score_turtle.write("Clicks: 0", align="center", font=("Arial", 16, "normal"))
+score_turtle.write("Score: 0", align="center", font=("Arial", 16, "normal"))
 click_count = 0
 
-# Function to update the click counter
 def update_click_count(x, y):
     global click_count
     click_count += 1
     score_turtle.clear()
-    score_turtle.write(f"Clicks: {click_count}", align="center", font=("Arial", 16, "normal"))
+    score_turtle.write(f"Score: {click_count}", align="center", font=("Arial", 16, "normal"))
 
-# Bind the click event to the image turtle
 one.onclick(update_click_count)
 
 def countdown(seconds):
@@ -46,7 +43,7 @@ def countdown(seconds):
         time.sleep(1)
         seconds -= 1
     dolphin.clear()
-    dolphin.write("It is over", align="center", font=("Arial", 24, "normal"))
+    dolphin.write("It is over, thanks for playing -Yusuf Ünal Özdemir", align="center", font=("Arial", 24, "normal"))
 
 
 countdown(10)
